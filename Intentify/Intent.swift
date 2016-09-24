@@ -7,6 +7,16 @@
 //
 
 struct Intent {
-  let isSelling: String
+  let isSelling: Bool
   let category: Category
+}
+
+extension Intent: Hashable, Equatable {
+  var hashValue: Int {
+    return category.hashValue + (isSelling ? 1000 : 2000)
+  }
+}
+
+func ==(lhs: Intent, rhs: Intent) -> Bool {
+  return lhs.hashValue == rhs.hashValue
 }

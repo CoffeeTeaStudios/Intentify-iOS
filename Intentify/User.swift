@@ -7,4 +7,13 @@
 //
 
 final class User {
+  var firstName: String
+  var lastName: String
+  
+  var intents: Set<Intent> = []
+  
+  init(firstName: String, lastName: String) {
+    self.firstName = firstName
+    self.lastName = lastName
+  }
 }

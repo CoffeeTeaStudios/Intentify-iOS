@@ -6,6 +6,6 @@
 //  Copyright © 2016 Kelvin. All rights reserved.
 //
 
-enum Category {
+enum Category: String {
   case phone, watch
 }
