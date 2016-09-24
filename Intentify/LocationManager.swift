@@ -6,4 +6,31 @@
 //  Copyright © 2016 Kelvin. All rights reserved.
 //
 
-import Foundation
+import CoreLocation
+
+final class LocationManager: NSObject {
+  static let sharedInstance = LocationManager()
+  
+  fileprivate let locationManager = CLLocationManager()
+  
+  private override init() {
+    super.init()
+    
+    locationManager.requestAlwaysAuthorization()
+    locationManager.delegate = self
+  }
+}
+
+// MARK: - Methods
+extension LocationManager {
+  func getCurrentLocation() {
+    locationManager.requestLocation()
+  }
+}
+// MARK: - CLLocationManagerDelegate
+extension LocationManager: CLLocationManagerDelegate {
+  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    print(locations)
+  }
+}
+
