@@ -8,10 +8,15 @@
 
 import CoreLocation
 
+protocol LocationManagerDelegate: class {
+  func didUpdateLocations(locations: [CLLocation])
+}
+
 final class LocationManager: NSObject {
   static let sharedInstance = LocationManager()
   
   fileprivate let locationManager = CLLocationManager()
+  weak var delegate: LocationManagerDelegate?
   
   private override init() {
     super.init()
@@ -30,7 +35,11 @@ extension LocationManager {
 // MARK: - CLLocationManagerDelegate
 extension LocationManager: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    print(locations)
+    delegate?.didUpdateLocations(locations: locations)
+  }
+  
+  func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    print("locationManager failed with error: \(error)")
   }
 }
 

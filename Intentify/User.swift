@@ -10,10 +10,17 @@ final class User {
   var firstName: String
   var lastName: String
   
-  var intents: Set<Intent> = []
+  var intentions: Set<Intent> = []
   
   init(firstName: String, lastName: String) {
     self.firstName = firstName
     self.lastName = lastName
+  }
+}
+
+// MARK: - IntentDisplayable
+extension User: IntentDisplayable {
+  var name: String {
+    return firstName + " " + lastName
   }
 }

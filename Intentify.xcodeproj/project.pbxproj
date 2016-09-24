@@ -15,6 +15,9 @@
 		604DB6761D961D5D00337DEC /* Intent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6751D961D5D00337DEC /* Intent.swift */; };
 		604DB6781D961D8D00337DEC /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6771D961D8D00337DEC /* Category.swift */; };
 		604DB67A1D961DD600337DEC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6791D961DD600337DEC /* User.swift */; };
+		604DB67C1D961F2900337DEC /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB67B1D961F2900337DEC /* ExploreViewController.swift */; };
+		604DB67F1D9620D300337DEC /* User+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB67E1D9620D300337DEC /* User+Tests.swift */; };
+		604DB6811D96228100337DEC /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DB6801D96228100337DEC /* ExploreCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		604DB6751D961D5D00337DEC /* Intent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intent.swift; sourceTree = "<group>"; };
 		604DB6771D961D8D00337DEC /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		604DB6791D961DD600337DEC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		604DB67B1D961F2900337DEC /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		604DB67E1D9620D300337DEC /* User+Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Tests.swift"; sourceTree = "<group>"; };
+		604DB6801D96228100337DEC /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			children = (
 				604DB65E1D96192400337DEC /* AppDelegate.swift */,
 				604DB6731D961A3400337DEC /* LocationManager.swift */,
+				604DB67D1D9620C200337DEC /* Sample Test Code */,
 				604DB6721D9619A300337DEC /* Views */,
 				604DB6711D96199E00337DEC /* Models */,
 				604DB6701D96198C00337DEC /* Controllers */,
@@ -76,6 +83,7 @@
 		604DB6701D96198C00337DEC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				604DB67B1D961F2900337DEC /* ExploreViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -93,8 +101,17 @@
 		604DB6721D9619A300337DEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				604DB6801D96228100337DEC /* ExploreCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		604DB67D1D9620C200337DEC /* Sample Test Code */ = {
+			isa = PBXGroup;
+			children = (
+				604DB67E1D9620D300337DEC /* User+Tests.swift */,
+			);
+			name = "Sample Test Code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +189,12 @@
 			files = (
 				604DB6741D961A3400337DEC /* LocationManager.swift in Sources */,
 				604DB65F1D96192400337DEC /* AppDelegate.swift in Sources */,
+				604DB67C1D961F2900337DEC /* ExploreViewController.swift in Sources */,
+				604DB6811D96228100337DEC /* ExploreCell.swift in Sources */,
 				604DB6761D961D5D00337DEC /* Intent.swift in Sources */,
 				604DB67A1D961DD600337DEC /* User.swift in Sources */,
 				604DB6781D961D8D00337DEC /* Category.swift in Sources */,
+				604DB67F1D9620D300337DEC /* User+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

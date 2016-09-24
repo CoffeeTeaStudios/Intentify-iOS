@@ -11,6 +11,22 @@ struct Intent {
   let category: Category
 }
 
+// MARK: - CustomStringConvertible
+extension Intent: CustomStringConvertible {
+  var description: String {
+    var description = ""
+    if isSelling {
+      description += "I am selling "
+    } else {
+      description += "I am buying "
+    }
+    
+    description += "a \(category.rawValue)"
+    return description
+  }
+}
+
+// MARK: - Hashable, Equatable
 extension Intent: Hashable, Equatable {
   var hashValue: Int {
     return category.hashValue + (isSelling ? 1000 : 2000)
